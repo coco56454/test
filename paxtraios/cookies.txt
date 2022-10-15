@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+game.paxtraios.com	TRUE	/	FALSE	1999999999	PHPSESSID	9e7f63e4f75d30af41705f7e556e410b
+

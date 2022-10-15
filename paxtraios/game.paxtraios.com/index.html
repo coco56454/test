@@ -1,0 +1,293 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from game.paxtraios.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 17:37:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<link rel="stylesheet" href="../stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script src="../code.jquery.com/jquery-3.3.1.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.js"></script>
+<script src="../maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.js"></script>
+
+<div>
+    <div class="stars"></div>
+    <div class="twinkl"></div>
+</div>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+<link rel="icon" href="../paxtraios.com/wp-content/uploads/2022/01/cropped-LOGO-non-deplie-32x32.png" sizes="32x32">
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+</script>
+
+		<title>Paxtraios tableau de bord </title>
+		<link rel="preconnect" href="https://fonts.gstatic.com/"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+        <style>
+            p, p::after {
+              width: 380px;
+              height: 86px;
+              font-size: 36px;
+              font-family: 'Bebas Neue', cursive;
+              background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+              border: 0;
+              color: #fff;
+              letter-spacing: 3px;
+              line-height: 88px;
+              box-shadow: 6px 0px 0px #00E6F6;
+              outline: transparent;
+              position: relative;
+            }
+            
+            p::after {
+              --slice-0: inset(50% 50% 50% 50%);
+              --slice-1: inset(80% -6px 0 0);
+              --slice-2: inset(50% -6px 30% 0);
+              --slice-3: inset(10% -6px 85% 0);
+              --slice-4: inset(40% -6px 43% 0);
+              --slice-5: inset(80% -6px 5% 0);
+              
+              content: 'CONNEXION';
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+              text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+              clip-path: var(--slice-0);
+            }
+            
+            p:hover::after {
+              animation: 1s glitch;
+              animation-timing-function: steps(2, end);
+            }
+            
+            @keyframes glitch {
+              0% {
+                clip-path: var(--slice-1);
+                transform: translate(-20px, -10px);
+              }
+              10% {
+                clip-path: var(--slice-3);
+                transform: translate(10px, 10px);
+              }
+              20% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 10px);
+              }
+              30% {
+                clip-path: var(--slice-3);
+                transform: translate(0px, 5px);
+              }
+              40% {
+                clip-path: var(--slice-2);
+                transform: translate(-5px, 0px);
+              }
+              50% {
+                clip-path: var(--slice-3);
+                transform: translate(5px, 0px);
+              }
+              60% {
+                clip-path: var(--slice-4);
+                transform: translate(5px, 10px);
+              }
+              70% {
+                clip-path: var(--slice-2);
+                transform: translate(-10px, 10px);
+              }
+              80% {
+                clip-path: var(--slice-5);
+                transform: translate(20px, -10px);
+              }
+              90% {
+                clip-path: var(--slice-1);
+                transform: translate(-10px, 0px);
+              }
+              100% {
+                clip-path: var(--slice-1);
+                transform: translate(0);
+              }
+            }
+            
+            
+            @mixin center(){
+              -webkit-transform: translate(-50%,-50%);
+                  -ms-transform: translate(-50%,-50%);
+                      transform: translate(-50%,-50%);
+                left:50%;
+                top:50%;
+            }
+            
+            
+            @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+            .title{
+              font-weight: 800;
+              color: transparent;
+              font-size:120px;
+              background: url("../phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+              background-position: 40% 50%;
+              -webkit-background-clip: text;
+              position:relative;
+              text-align:center;
+              line-height:110px;
+              letter-spacing: -8px;
+            }
+            
+            @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+            .title2{
+              font-weight: 800;
+              color: transparent;
+              font-size:60px;
+              background: url("../phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+              background-position: 40% 50%;
+              -webkit-background-clip: text;
+              position:relative;
+              text-align:center;
+              line-height:50px;
+              letter-spacing: 0px;
+            }
+            
+        </style>
+        <script>
+            $(document).ready(function(){
+                var mouseX, mouseY;
+                var ww = $( window ).width();
+                var wh = $( window ).height();
+                var traX, traY;
+                $(document).mousemove(function(e){
+                    mouseX = e.pageX;
+                    mouseY = e.pageY;
+                    traX = ((4 * mouseX) / 570) + 40;
+                    traY = ((4 * mouseY) / 570) + 50;
+                    console.log(traX);
+                    $(".title").css({"background-position": traX + "%" + traY + "%"});
+                });
+            });
+        </script>
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<img src="image/logoasso.png" width="100" height="23" alt="GN2.0 logo">
+	<div style="border-left :solid white 20px;"></div>
+	<a class="navbar-brand" href="index-2.html">
+	    Accueil
+	</a>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+					</ul>
+		<ul class="navbar-nav ml-md-auto">
+					</ul>
+	</div>
+</nav></br>
+		    	    
+            <div class="container">
+                <div class="row mx-auto">
+                    <div class="col-12 d-flex bg-light text-dark">
+                        <div class="container mx-auto">
+                            <br>
+                            <div class="title">PAXTRAIOS</div>
+                            <br>
+                            <div class="title2" id="compte_a_rebours"></div>
+                            <!--<script type="text/javascript">
+                                function compte_a_rebours()
+                                {
+                                    var compte_a_rebours = document.getElementById("compte_a_rebours");
+                                
+                                    var date_actuelle = new Date();
+                                    var date_evenement = new Date("Sep 26 08:00:00 2022");
+                                    var total_secondes = (date_evenement - date_actuelle) / 1000;
+                                
+                                    var prefixe = "";
+                                    if (total_secondes < 0)
+                                    {
+                                        total_secondes = Math.abs(total_secondes); // On ne garde que la valeur absolue
+                                    }
+                                
+                                    if (total_secondes > 0)
+                                    {
+                                        var jours = Math.floor(total_secondes / (60 * 60 * 24));
+                                        var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
+                                        minutes = Math.floor((total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60))) / 60);
+                                        secondes = Math.floor(total_secondes - ((jours * 60 * 60 * 24 + heures * 60 * 60 + minutes * 60)));
+                                
+                                        compte_a_rebours.innerHTML = (heures+jours*24) + ' h  ' + minutes + ' m  ' + secondes + ' s ' ;
+                                    }
+                                    else
+                                    {
+                                        compte_a_rebours.innerHTML = 'Jeu lancé';
+                                    }
+                                
+                                    var actualisation = setTimeout("compte_a_rebours();", 1000);
+                                }
+                                
+                                compte_a_rebours();
+                                
+                            </script>-->
+
+
+        				    <div class="row mt-4"> 
+        				        <img class="text-align m-auto" src="image/menu.png">
+        				    </div> 
+        				    
+        				    <div class="row mb-4 mt-4"> 
+            					<p class="text-center m-auto" data-toggle="collapse" href="#connexion" role="button" name="connexionclic">Connexion</p>
+            				</div> 
+        					
+        					
+        					<div class="row mb-4 mt-4 nav navbar-dark collapse" id="connexion">
+            					
+            					<form class="row w-100 m-auto" method="post" action="1.php">
+            						<div class="col-4 text-center bg-light text-dark">
+        	                            <input class="form-control" type="email" placeholder="Adresse mail" name="mail" value="" required>
+            						</div>
+            						
+            						<div class="col-4 text-center bg-light text-dark">
+            						    <input class="form-control" type="password" placeholder="Mot de passe" name="mdp" value="" required>
+            					    </div>
+            						
+            						<div class="text-center col-2 m-auto bg-light text-dark">
+            						    <button class="btn btn-success" type="submit" name="connexion">Se connecter</button>    
+            						</div>
+            						
+            						<div class="text-center col-2 bg-light text-dark">
+            						    <div class="btn btn-danger" data-toggle="collapse" href="#mdpoublie" name="mdpoublie">MDP oublié</div>    
+            						</div>
+            					</form>	
+            				
+            				</div>	
+            				
+            				<div class="row mb-4 mt-4 nav navbar-dark collapse" id="mdpoublie">
+            					
+            					<form method="post" class="row w-100 m-auto" action="https://game.paxtraios.com/index.php">
+            						<div class="text-center col-6 bg-light text-dark">
+            						    Rentrez votre e-mail et cliquez sur Envoyer
+            						</div>
+            						<div class="text-center col-4 bg-light text-dark">
+        	                            <input class="form-control" type="email" placeholder="Adresse mail" name="mail2" value="" required>
+            						</div>
+            						<div class="text-center col-2 bg-light text-dark">
+            						    <button class="btn btn-warning" type="submit" name="oublie">Envoyer</button>    
+            						</div>
+            					</form>			
+                            
+                            </div>
+                            
+                        </div>
+                    </div>	
+                </div>
+            </div>
+        	</body>
+
+<!-- Mirrored from game.paxtraios.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Oct 2022 17:37:19 GMT -->
+</html>
